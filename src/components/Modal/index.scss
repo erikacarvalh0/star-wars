@@ -1,0 +1,96 @@
+@import '../../styles/_variables.scss';
+@import '../../styles/_mixins.scss';
+@import '../../styles/_animations.scss';
+
+.dialog {
+	position: relative;
+	border: 0;
+	box-shadow: 5px 7px 12px $grey;
+	padding: 32px 64px;
+    max-width: 60vw;
+
+	&::backdrop {
+		background: rgba(0, 0, 0, .7);
+	}
+
+    &[open] {
+        animation: fadeIn 1.5s .3s ease both, pulse 1.5s .3s ease both;
+
+        &::backdrop {
+            animation: fadeIn .5s ease both, pulse .5s ease both;
+        }
+    }
+
+    &.hide {
+        animation: fadeOut .75s ease both;
+
+        &::backdrop {
+            animation: fadeOut .75s ease both;
+        }
+    }
+
+    &__close {
+        cursor: pointer;
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        width: 20px;
+        height: 20px;
+        padding: 0;
+        @include closeIcon(black);
+    }
+
+    &__title {
+        max-width: 70%;
+        // font-family: $fontSecondary;
+        color: $grey;
+        font-size: 24px;
+        font-weight: 700;
+        text-transform: uppercase;
+        line-height: 1.5em;
+    }
+
+    &__text {
+        display: flex;
+        gap: 8px;
+        align-items: center;
+        margin-top: 16px;
+        font-size: 16px;
+        color: $grey;
+
+        &:not(:only-of-type) {
+            &:before {
+                content: '';
+                display: block;
+                width: 4px ;
+                height: 4px;
+                background: black;
+            }
+        }
+    }
+    
+    &__body {
+        display: flex;
+        gap: 64px;
+        align-items: center;
+    }
+
+    &__img {
+        height: 300px;
+        width: 300px;
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+
+    &__list {
+        list-style: none;
+        padding: 0;
+
+        &-item {
+            &:not(:first-of-type) {
+                margin-top: 12px;
+            }
+        }
+    }
+}
