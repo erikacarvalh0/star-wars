@@ -1,0 +1,71 @@
+@import '../../styles/_variables.scss';
+
+.list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 32px;
+    justify-content: center;
+
+    &__item {
+        cursor: pointer; 
+        position: relative;
+        overflow: hidden;
+        width: 18vw;
+        height: 18vw;
+
+        &:hover {
+            .list__item-img {
+                filter: grayscale(1);
+                transform: scale(1.1)
+            }
+            .list__item-txt {
+                opacity: 1;
+            }
+        }
+    }
+    
+    &__item-img {
+        width: 100%;
+        height: 100%;
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        transition: all .3s ease;
+
+        &.default {
+            background-size: contain;
+        }
+    }
+
+    &__item-txt {
+        position: absolute;
+        top: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: rgba($primaryColor, .7);
+        opacity: 0;
+        width: 100%;
+        height: 100%;
+        margin: 0;
+        font-size: 32px;
+        font-weight: 700;
+        text-align: center;
+        transition: opacity .3s ease;
+    }
+
+    &__loading {
+        width: 120px;
+        height: 120px;
+        animation: loader 1s ease-in-out alternate infinite;
+        filter: grayscale(1);
+
+        &-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            color: white;
+            animation: loaderText 1s ease-in-out alternate infinite;
+        }
+    }
+}
