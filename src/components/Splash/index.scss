@@ -1,0 +1,23 @@
+.splash {
+	position: absolute;
+	box-sizing: border-box;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background: black;
+	width: 99vw;
+	height: 100vh;
+	overflow: hidden;
+
+	&__logo {
+		width: 40vw;
+		height: 40vw;
+
+		&-container {
+			overflow: hidden;
+			width: 40vw;
+			height: 25vh;
+			animation: show 2s ease-in both, superScale 1s 2s ease-in both ;
+		}
+	}
+}
