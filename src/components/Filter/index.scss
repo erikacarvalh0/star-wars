@@ -1,0 +1,33 @@
+@import '../../styles/_variables.scss';
+
+.filter {
+    &__container {
+        box-sizing: border-box;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        gap: 16px;
+        position: relative;
+        z-index: 1;
+        padding: 32px;
+    }
+    
+    &__send {
+        display: flex;
+        align-items: center;
+        gap: 4px;
+        margin-left: 16px;
+        padding: 0;
+        color: $primaryColor;
+        font-size: 18px;
+        
+        svg {
+            margin-top: -8px;
+            font-size: 28px;
+        }
+
+        &:disabled {
+            opacity: .5
+        }
+    }
+}
