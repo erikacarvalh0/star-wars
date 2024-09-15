@@ -1,0 +1,58 @@
+@import '../../styles/_variables.scss';
+
+.pagination {
+    cursor: pointer;
+    display: flex;
+    gap: 16px;
+    justify-content: center;
+    margin: 64px auto 0;
+    border-radius: 32px;
+    padding: 16px 32px;
+    color: $primaryColor;
+    font-size: 24px;
+    text-align: center;
+    transition: all .3s ease;
+
+    &:after {
+        content: '';
+        display: block;
+        width: 12px;
+        height: 12px;
+        border: 2px solid $primaryColor;
+        border-right: none;
+        border-top: none;
+        transform: rotate(-45deg) translateY(6px);
+        transition: border .3s ease;
+    }
+
+    &.loading {
+        &:after {
+            width: 24px;
+            height: 24px;
+            border: 3px solid $primaryColor;
+            border-right: none;
+            border-top: none;
+            border-radius: 50%;
+            animation: rotate 1s linear infinite;
+        }
+    }
+
+    &:hover {
+        background: $primaryColor;
+        color: black;
+
+        &:after {
+            border: 2px solid black;
+            border-right: none;
+            border-top: none;
+        }
+
+        &.loading {
+            &:after {
+                border: 3px solid black;
+                border-right: none;
+                border-top: none;
+            }
+        }
+    }
+}
