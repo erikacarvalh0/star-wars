@@ -1,0 +1,39 @@
+@import url('./styles/index.scss');
+
+.app {
+  box-sizing: border-box;
+  background-color: black;
+  color: white;
+  min-height: 100vh;
+  padding-bottom: 64px;
+
+  .content {
+    visibility: hidden;
+    
+    &.visible {
+      visibility: visible;
+      animation: fadeIn .5s ease-in both;
+
+      .list__item {
+        @for $i from 1 to 100 {
+          &:nth-child(#{$i}) {
+            $time: $i * 0.1s + 0.3s;
+            animation: slideUp #{$time} ease-in both; 
+          }
+        }
+      }
+    }
+  }
+
+  &__no-items {
+    width: 100%;
+    font-size: 24px;
+    text-align: center;
+  }
+}
+
+button {
+  background: none;
+  border: unset;
+  padding: 0;
+}
