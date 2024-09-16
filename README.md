@@ -1,70 +1,88 @@
-# Getting Started with Create React App
+# Star Wars Project
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Welcome to the Star Wars Project repository! This project is a comprehensive application that lets you explore the Star Wars universe. Below, you'll find instructions on how to install, start, test, and use the features of the application.
 
-## Available Scripts
+## Table of Contents
 
-In the project directory, you can run:
+1. [Installation](#installation)
+2. [Starting the Project](#starting-the-project)
+3. [Testing](#testing)
+4. [Features](#features)
+5. [Contributing](#contributing)
+6. [License](#license)
 
-### `npm start`
+## Installation
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+To get started with the Star Wars Project, you'll need to set up your development environment. Follow these steps:
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+1. **Clone the Repository**
 
-### `npm test`
+```bash
+git clone https://github.com/erikacarvalh0/star-wars.git
+cd star-wars
+```
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+2. **Install Dependencies**
 
-### `npm run build`
+Make sure you have [Node.js](https://nodejs.org/) and [npm](https://www.npmjs.com/) installed. Then, run:
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+```bash
+npm install
+```
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Starting the Project
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+To start the project, follow these steps:
 
-### `npm run eject`
+1. **Start the Development Server**
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+```bash
+npm start
+```
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+This will start the server and usually runs on http://localhost:3000 or a similar port. Check the console output for the exact URL.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+2. **Build the Project (Optional)**
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+To create a production build, run:
 
-## Learn More
+```bash
+npm run build
+```
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+The build artifacts will be available in the `build` directory.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
 
-### Code Splitting
+## Testing
+To ensure the application is functioning as expected, you can run tests using the following commands:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+1. **Run Tests**
 
-### Analyzing the Bundle Size
+```bash
+npm test
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+This will execute the unit tests defined in your project. The results will be displayed in the terminal.
 
-### Making a Progressive Web App
+## Features
+Here are some of the key features of the Star Wars Project:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+- Star Wars Characters: View details of various Star Wars characters.
+- Search: You can search by any character name
+- Filter: You can filter the character by some planets, starships and/or species
 
-### Advanced Configuration
+## Contributing
+We welcome contributions to the Star Wars Project! If you'd like to contribute, please follow these guidelines:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+- Fork the Repository
+- Create a New Branch: git checkout -b feature/YourFeature
+- Make Your Changes
+- Commit Your Changes: git commit -am 'Add new feature'
+- Push to the Branch: git push origin feature/YourFeature
+- Create a Pull Request
+- Please make sure your code adheres to the project's coding standards and includes tests where applicable.
 
-### Deployment
+## License
+This project is licensed under the MIT License.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Copyright (c) 2024 - Erika Carvalho
